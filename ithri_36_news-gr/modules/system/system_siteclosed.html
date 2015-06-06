@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="Refresh" content="<{$time}>; url=<{$url}>" />
+<title><{$xoops_sitename}></title>
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<style>
+a {color: #fff;}
+</style>
+</head>
+<body>
+<div style="width:600px; padding: 5px; margin: 0 auto; border: 7px solid #0b607b; text-align:center; background-color: #FFFFFF; color: #333;">
+
+  <!-- Start header -->
+  &nbsp;<a href="#"><img src="<{xoImgUrl img/underconstruction.jpg }>"></a>   
+  <!-- End header -->
+  
+  <!-- Star Site Closed form -->
+  <div id="xo-siteclosed">
+    <!-- Star message -->
+    <{$lang_siteclosemsg}>
+    <!-- End message -->
+  
+    <form action="<{$xoAppUrl user.php}>" method="post">
+      <p>
+        &nbsp;<!-- User name --><label for="uname"><{$lang_username}></label><input type="text" id="uname" name="uname" size="12" value="" />
+        <br />
+        <!-- Password -->
+        <label for="pass"><{$lang_password}></label><input type="password" id="pass" name="pass" size="12" />
+        <br />
+        <!-- Submit button -->
+   	    <input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>" />
+        <input type="hidden" name="xoops_login" value="1" />
+        <input type="submit" value="<{$lang_login}>" />
+      </p>
+    </form>
+  </div>
+  <!-- End  Site Closed form -->
+  
+</body>
+</html>
